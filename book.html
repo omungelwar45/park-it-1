@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/12222.png" type="image/x-icon">
+  
+        <!--=============== REMIXICONS ===============-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+  
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/style.css">
+  
+        <title>lets-Park</title>
+     </head>
+<body >
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        <nav class="nav  ">
+            <div class="nav__logo">
+                <img src="assets/img/12222.png" alt="logo" class="logo">
+            </div>
+
+            <ul class="nav__items">
+                <li class="nav__links">
+                    <a href="/index.html" class="nav__link">Home</a>
+                </li>
+
+                <li class="nav__links">
+                    <a href="/book.html" class="nav__link">Book Now</a>
+                </li>
+
+                <li class="nav__links">
+                    <a href="/about.html" class="nav__link">About</a>
+                </li>
+            </ul>
+        </nav>
+      </header>
+
+        <!--==================== MAIN ====================-->
+        <main>
+            <!--==================== Book ====================-->
+            <section class="book">
+                <div class="book__container  grid">
+                    <div class="book__data">
+                        <h1 class="book__title">
+                            Lets Book 
+                            <br>
+                            Your Parking Slot
+                        </h1>
+                        <div class="location">
+                            <h3>Location: </h3>
+                            <h4 class="location__name" id="loc-name">Nexus Elante mall</h4>
+                        </div>
+                    </div>
+
+                    <div class="book__seat">
+                        <div class="book__seat-textarea">
+                            <h2 class="seat__heading">
+                                Available Parking Slot
+                            </h2>
+                            <div class="location__selector">
+                                <label for="loc">Select Location</label>
+                                <select name="location" id="loc" class="loc">
+                                    <option value="1" id="loc1">season Mall</option>
+                                    <option value="2" id="loc2">vr mall Lake</option>
+                                    <option value="3" id="loc3">VR Pune</option>
+                                    <option value="4" id="loc4">hospital</option>
+                                    <option value="5" id="loc5">internity mall</option>
+                                </select>
+                            </div>
+                            <div class="parking__slots">
+                                <div class="slots available  l1">1</div>
+                                <div class="slots available l1">2</div>
+                                <div class="slots available l1">3</div>
+                                <div class="slots available filled l1">4</div>
+                                <div class="slots available l1">5</div>
+                                <div class="slots available l1 filled">6</div>
+                                <div class="slots available l1">7</div>
+                                <div class="slots available l1">8</div>
+                                <div class="slots available filled l1">9</div>
+                                <div class="slots available l1">10</div>
+                                <div class="slots available l2 l1 filled">11</div>
+                                <div class="slots available l2 l1">12</div>
+                                <div class="slots available l2 l1 filled">13</div>
+                                <div class="slots available l1 l3 l2">14</div>
+                                <div class="slots available l1 l3 l2">15</div>
+                                <div class="slots available l1 l3">16</div>
+                                <div class="slots available l1 l3">17</div>
+                                <div class="slots available l1 l3 l4">18</div>
+                                <div class="slots available l1 l3 l4">19</div>
+                                <div class="slots available l1 l3 l4">20</div>
+                                <div class="slots available l1 l3 l5 l4">21</div>
+                                <div class="slots available l1 l3 l5 l4">22</div>
+                                <div class="slots available l1 l3 l5 l4">23</div>
+                                <div class="slots available l1 l3 l5 l4">24</div>
+                                <div class="slots available l1 l3 l5 l4">25</div>
+                            </div>
+
+                            <button onclick="showPrice();" class="home__button book__button">Book Now</button>
+                        </div>
+                    </div>
+
+                        <div class="price__container" id="price__con">
+                            <h3 class="price">
+                                Price per Slot: 50
+                            </h3>
+                            <h3 class="total">Total Payable Amount: 200</h3>
+                            <h1 class="use">Pay using UPI</h1>
+    
+                            <div class="price__section">
+                                <p>Enter Your UPI details</p>
+                                <input type="text" placeholder="UPI ID" class=input__text>
+    
+                                <div class="price__buttons">
+                                    <button onclick="showAlert();" class="home__button pay__button">Pay</button>
+                                    <button onclick="hidePrice();" class="home__button exit__button">Exit</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                </div>
+
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section ">
+            <div class="footer__container ">
+                <h1 class="footer__data">
+                    Check Available
+                    <br>
+                    Parking spots
+                </h1>
+
+                <h1 class="footer__data">
+                    Book your Spot
+                    <br>
+                    Online
+                </h1>
+
+                <h1 class="footer__data">
+                    Get A safe Place
+                    <br>
+                    For parking
+                </h1>
+            </div>
+        </footer>
+
+        <div class="overlay" id="overlay"></div>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        <!--============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+</body>
+</html>

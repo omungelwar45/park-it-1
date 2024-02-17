@@ -1,0 +1,506 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 4rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color:  hsl(217, 83%, 47%);
+  --black-color: hsl(0, 0%, 5%);
+  --black-color-light: hsl(0, 0%, 70%);
+  --white-color: hsl(0, 0%, 100%);
+  --title-color: hsl(0, 0%, 5%);
+  --text-color: hsl(0, 0%, 55%);
+  --body-color: hsl(0, 0%, 96%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Syncopate", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1152px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.grid{
+  display: grid;
+  row-gap: 4rem;
+}
+
+section{
+  padding: 5rem 0;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1rem;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: box-shadow .4s;
+}
+
+.scroll-header{
+  box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.05);
+}
+
+.nav{
+  height: calc(var(--header-height) + 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  width: 150px;
+  height: auto;
+  margin-top: .20rem;
+}
+
+.nav__items{
+  display: flex;
+  column-gap: 2rem;
+  margin-bottom: .30rem;
+}
+.nav__link{
+  font-weight: 900;
+  font-size: larger;
+}
+
+.home{
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__container{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top: 4rem;
+}
+
+.home__data{
+  text-align: center;
+  color: var(--black-color);
+}
+
+.home__title{
+  color: #1a2e35;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.home__description{
+  padding: 0 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.home__button{
+  display: inline-flex;
+  padding: .75rem 2rem;
+  background-color: var(--first-color);
+  border-radius: 4rem;
+  color: var(--white-color);
+  font-size: 1rem;
+  border: none;
+} 
+
+.home__button:hover{
+  box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.25)
+}
+.home__img{
+  width: 780px
+}
+
+.footer{
+  padding: 0;
+  background: linear-gradient(45deg,#2f7bff,#021f41);
+}
+
+.footer__container{
+  display: flex;
+  padding: 2rem 0;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__data{
+  font-size: 1rem;
+  color: var(--white-color);
+  text-align: center;
+}
+
+
+
+/* book  */
+
+.book{
+  background-color: #fff;
+}
+
+.book__container{
+ display: flex;
+ flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+  row-gap: 2rem;
+}
+
+.book__data{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+}
+
+.book__title{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #021f41;
+}
+
+.location{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .20rem;
+  font-size: .80rem;
+}
+
+.location h3{
+  color: #1a2e35;
+  font-size: 1rem;
+}
+
+.location h4{
+  color: #0155b7;
+}
+
+.book__seat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book__seat-textarea{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat__heading{
+  color: #0155b7;
+  font-size: 1.25rem;
+}
+
+
+.location__selector select{
+  border-radius: 4px;
+}
+
+.parking__slots{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: .50rem;
+  gap: .80rem;
+  width: 320px;
+}
+
+.slots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.available{
+  background-color: #0155b7;
+  color: #fff;
+}
+
+.filled{
+  background-color: gray;
+}
+
+.book__button{
+  margin-top: 1rem;
+}
+
+/* About */
+.about{
+  background-color: #fff;
+}
+
+.about__container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.about__data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.about__img{
+  width: 220px;
+
+}
+
+.about__description{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__title{
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+}
+
+.about__des{
+  text-align: center;
+}
+
+.l2{
+  display: flex;
+}
+
+.show-display{
+  display: none;
+}
+
+.price__container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 300px;
+  scale: 0;
+  z-index: 9999999;
+}
+
+.overlay {
+  position: fixed;
+  background-color: #5f5f5f83;
+  top: 0;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+  z-index: 999999;
+}
+.overlayactive {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-scale{
+  scale: 1;
+}
+
+.background{
+  background-color: rgba(0,0,0,.5);
+  opacity: 1;
+  z-index: var(--z-fixed);
+}
+
+.price{
+  color: #0155b7;
+  text-align: center;
+  font-size: .90rem;
+  margin-top: 1rem;
+}
+
+.total{
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: .90rem;
+}
+
+.use{
+  text-align: center;
+  font-size: 1.25rem;
+  color: black;
+  margin-top: 1rem;
+}
+
+.price__section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input__text{
+  padding: 2px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.pay__button,
+.exit__button{
+  padding: .80rem 1.5rem;
+}
+.price__buttons{
+  display: flex;
+  column-gap: 2rem;
+}
+.exit__button{
+  background-color: black;
+  color: #fff;
+}
+
+
+
+@media screen and (min-width: 768px){
+  .home__img{
+    width: 450px;
+    justify-self: center;
+  }
+  .nav{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .home__container{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer{
+    height: 30vh;
+    width: 100vw;
+
+  }
+
+  .footer__container{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   
+  }
+
+  .book__container{
+    flex-direction: row;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__container{
+    width: 800px;
+    justify-content: center;
+  }
+
+  .about__data{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about__img{
+    width: 400px;
+  }
+
+  .about__description{
+    text-align: initial;
+
+  }
+ .im2{
+    order: 1;
+  }
+}
